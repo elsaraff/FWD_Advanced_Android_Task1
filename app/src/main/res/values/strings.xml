@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Shoe Store Inventory App</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="e_mail">E-mail:</string>
+    <string name="password">Password:</string>
+    <string name="login">login</string>
+    <string name="signup">signup</string>
+    <string name="welcome">Welcome</string>
+    <string name="click_next_to_continue">click next to continue</string>
+    <string name="next">next</string>
+    <string name="instructions">Instructions</string>
+    <string name="do_that">1. You should …</string>
+    <string name="do_not">2. You shouldn\'t…</string>
+    <string name="company">Company:</string>
+    <string name="name">Name:</string>
+    <string name="size">Size:</string>
+    <string name="description">Description:</string>
+    <string name="add">Add an item</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="soft_landing_for_heel_strikers">Soft landing for heel strikers</string>
+    <string name="_40">40</string>
+    <string name="fit_balance">Fit Balance</string>
+    <string name="new_balance">New Balance</string>
+    <string name="logout">Logout</string>
+    <string name="show_menu">Show menu</string>
+</resources>
