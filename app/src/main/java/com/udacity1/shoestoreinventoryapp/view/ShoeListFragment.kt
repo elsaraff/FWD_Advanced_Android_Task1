@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity1.shoestoreinventoryapp.R
 import com.udacity1.shoestoreinventoryapp.databinding.FragmentShoeListBinding
@@ -19,13 +19,11 @@ import com.udacity1.shoestoreinventoryapp.viewmodel.SharedViewModel
 class ShoeListFragment : Fragment() {
 
     private lateinit var binding: FragmentShoeListBinding
-    private lateinit var sharedViewModel: SharedViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
 
         binding = FragmentShoeListBinding.inflate(LayoutInflater.from(requireContext()))
 
@@ -49,8 +47,11 @@ class ShoeListFragment : Fragment() {
 
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
+        // Get a reference to the ViewModel scoped to this Fragment
+        //val sharedViewModel by viewModels<SharedViewModel>()
 
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
+        // Get a reference to the ViewModel scoped to its Activity
+        val sharedViewModel by activityViewModels<SharedViewModel>()
 
         sharedViewModel.shoes.observe(this.viewLifecycleOwner) {
             for (shoe in it) {

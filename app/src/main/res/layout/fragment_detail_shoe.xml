@@ -11,12 +11,19 @@
         <variable
             name="sharedViewModel"
             type="com.udacity1.shoestoreinventoryapp.viewmodel.SharedViewModel" />
+
+        <!--
+        <variable
+            name="Converter"
+            type="com.udacity1.shoestoreinventoryapp.viewmodel.Converter" />
+            -->
+
     </data>
 
+    <!-- ConstraintLayout more flexibility and is easier to use in the Layout Editor  -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".view.shoe.DetailShoeFragment">
+        android:layout_height="match_parent">
 
 
         <TextView
@@ -33,7 +40,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <EditText
             android:id="@+id/editTextCompany"
             android:layout_width="0dp"
@@ -48,7 +54,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.476" />
+            app:layout_constraintVertical_bias="0.476"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/textView3"
@@ -66,8 +73,8 @@
             android:id="@+id/editTextName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
             android:layout_marginStart="140dp"
+            android:layout_marginEnd="30dp"
             android:hint="@string/fit_balance"
             android:importantForAutofill="no"
             android:inputType="text"
@@ -75,7 +82,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView3" />
+            app:layout_constraintTop_toTopOf="@+id/textView3"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/textView4"
@@ -89,12 +97,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
+        <!--  Using dataBinding converter Doesn't work  -->
+        <!--  android:text="@={Converter.doubleToString(shoe.size)}"  -->
+        <!--  android:text="@{String.format(shoe.size)}" -->
+
         <EditText
             android:id="@+id/editTextSize"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
             android:layout_marginStart="140dp"
+            android:layout_marginEnd="30dp"
             android:hint="@string/_40"
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
@@ -102,7 +114,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView4" />
+            app:layout_constraintTop_toTopOf="@+id/textView4"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/textView5"
@@ -120,8 +133,8 @@
             android:id="@+id/editTextDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
             android:layout_marginStart="140dp"
+            android:layout_marginEnd="30dp"
             android:hint="@string/soft_landing_for_heel_strikers"
             android:importantForAutofill="no"
             android:inputType="text"
@@ -130,7 +143,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView5"
-            app:layout_constraintVertical_bias="0.571" />
+            app:layout_constraintVertical_bias="0.571"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/save_bt"
@@ -161,4 +175,5 @@
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

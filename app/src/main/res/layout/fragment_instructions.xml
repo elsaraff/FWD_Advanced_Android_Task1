@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- ConstraintLayout more flexibility and is easier to use in the Layout Editor  -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
@@ -54,8 +55,8 @@
             android:id="@+id/next_bt2"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="150dp"
+            android:layout_marginEnd="@dimen/marginEnd"
+            android:layout_marginBottom="@dimen/marginBottom"
             android:text="@string/next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
